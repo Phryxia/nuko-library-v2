@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> - nuko::library</title>
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="/dist/styles/reset.css">
+    <link rel="stylesheet" href="/dist/styles/main.css">
+    <link rel="stylesheet" href="/dist/styles/article.css">
+  </head>
+  <body>
+    <!-- App -->
+    <div class="app">
+      <!-- Article -->
+      <article>
+        <!-- Title -->
+        <div class="general-box title">
+          <h1><%= title %></h1>
+          <span>by nuko <%= lastModified ? 'on ' + lastModified : '' %></span>
+        </div>
+
+        <!-- Content -->
+        <div class="general-box content">
+          <%- content %>
+        </div>
+      </article>
+
+      <!-- Navigation -->
+      <aside>
+        <nav class="general-box">
+          <!-- Navigation Entry -->
+          <%- include('tree', { index: index }) %>
+        </nav>
+      </aside>
+    </div>
+  </body>
+</html>

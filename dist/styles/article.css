@@ -1,0 +1,173 @@
+article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title {
+  background-color: #c41020;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 16px;
+}
+
+.content * {
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+.content h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-bottom: 3px solid #c41020;
+}
+
+.content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-bottom: 2px solid #c41020;
+}
+
+.content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.content h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.content h5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.content h6 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.content strong {
+  font-weight: bold;
+}
+
+.content em {
+  font-style: italic;
+}
+
+.content blockquote {
+  border-left: 5px solid #c41020;
+  padding-left: 1em;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  vertical-align: baseline;
+}
+
+.content ul, ol {
+  padding-inline-start: 20px;
+}
+
+.content ul {
+  list-style: disc;
+}
+
+.content ol {
+  list-style: decimal;
+}
+
+.content li {
+  margin-left: 10px;
+}
+
+.content li::marker {
+  color: black;
+  font-size: 16px;
+}
+
+/* 인라인 코드 */
+.content code {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  font-family: consolas, serif;
+  color: #c41020;
+  white-space: pre-wrap;
+}
+
+/* 블록 코드 */
+.content pre {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.content pre code {
+  background-color: none;
+  border: none;
+  padding: 0;
+  color: unset;
+}
+
+/* 표 관련 */
+.content table {
+  width: 100%;
+}
+
+.content thead {
+  border-bottom: 2px solid gray;
+  background-color: #ff9999;
+}
+
+.content tr {
+  border-bottom: 1px solid gray;
+}
+
+.content tr:last-child {
+  border-bottom: none;
+}
+
+.content th, td {
+  padding: 5px;
+}
+
+.content th {
+  font-weight: bold;
+}
+
+.content a {
+  color: #c41020;
+  text-decoration: none;
+}
+
+.content img {
+  width: 100%;
+}
+
+/* KaTeX 관련: 상단 .content * {}로 margin을 10을 준 것이 레이아웃을 깨먹을 때가 있음 */
+.content .katex * {
+  margin: unset;
+}
+
+sup, sub {
+  font-size: 0.7em;
+}

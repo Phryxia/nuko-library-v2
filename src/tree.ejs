@@ -1,0 +1,26 @@
+<div>
+  <div class="navigator-folder">
+    <!-- 폴더 이름만 분리한다 -->
+    <% const tokens = index.path.split('\\') %>
+    <%= tokens[tokens.length - 1] %>
+  </div>
+
+  <div class="navigator-entry">
+    <!-- 파일들 -->
+    <% index.files.forEach(file => { %>
+      <!-- 파일 이름만 분리한다 -->
+      <% const tokens = file.split('\\') %>
+      <% const name = tokens[tokens.length - 1] %>
+      <a href="<%= '\\dist\\' + file.substring(0, file.length - 3) + '.html' %>" >
+      <div class="navigator-file">
+        <%= name.substring(0, name.length - 3) %>
+      </div>
+      </a>
+    <% }) %>
+
+    <!-- 폴더들 -->
+    <% index.children.forEach(child => { %>
+      <%- include('tree', { index: child }) %>
+    <% }) %>
+  </div>
+</div>

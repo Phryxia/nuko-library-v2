@@ -1,0 +1,61 @@
+body {
+  background-color: #181717;
+}
+
+.general-box {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e7e6e6;
+  padding: 10px;
+}
+
+.app {
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 네비게이션 배경 설정 */
+nav {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* 폴더 버튼 & 파일 버튼 */
+.navigator-folder, .navigator-file {
+  width: max-content;
+  border-radius: 0.25em;
+  padding: 2px 0.5em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* 폴더 버튼 */
+.navigator-folder {
+  background-color: cornsilk;
+  border: 1px solid black;
+}
+
+/* 파일 버튼 */
+.navigator-file {
+  background-color: white;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: unset;
+}
+
+/* 하위 항목 오프셋 주기 */
+.navigator-entry {
+  padding-left: 1em;
+}
