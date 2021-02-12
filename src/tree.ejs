@@ -1,7 +1,7 @@
 <div>
   <div class="navigator-folder">
     <!-- 폴더 이름만 분리한다 -->
-    <% const tokens = index.path.split('\\') %>
+    <% const tokens = index.path.split('/') %>
     <%= tokens[tokens.length - 1] %>
   </div>
 
@@ -9,7 +9,7 @@
     <!-- 파일들 -->
     <% index.files.forEach(file => { %>
       <!-- 파일 이름만 분리한다 -->
-      <% const tokens = file.split('\\') %>
+      <% const tokens = file.split('/') %>
       <% const name = tokens[tokens.length - 1] %>
       <a href="<%= '\\dist\\' + file.substring(0, file.length - 3) + '.html' %>" >
       <div class="navigator-file">
