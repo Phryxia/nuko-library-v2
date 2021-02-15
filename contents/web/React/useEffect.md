@@ -23,7 +23,7 @@ const App = () => {
     // 자세한 것은 useCallback을 공부해보자.
     const onClickButton = useCallback(() => {
         setCount(count => count + 1);
-    });
+    }, []);
     
     console.log('on render!');
     
