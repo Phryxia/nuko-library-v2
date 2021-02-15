@@ -18,7 +18,7 @@ const App = () => {
        
         // 1초 뒤에 hi!를 콘솔에 찍는다.
         tid.current = setTimeout(() => console.log('hi!'), 1000);
-    });
+    }, []);
     
     return <input type='button' onClick={onClickButton} value='hi' />;
 };
