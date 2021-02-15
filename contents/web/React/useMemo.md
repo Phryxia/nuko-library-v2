@@ -40,7 +40,7 @@ const App = () => {
     
     // scores가 변하면 점수 합계를 구한다
     const sum = useMemo(() => {
-    	scores.reduce((acc, val) => acc + val, 0);
+    	return scores.reduce((acc, val) => acc + val, 0);
     }, [scores]);
     
     return (
